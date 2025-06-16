@@ -1,0 +1,33 @@
+/* index.css limpio y ordenado */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../imagenes/fondo3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+/* contenedor opcional si quieres usarlo más adelante */
+.contenedor {
+  text-align: center;
+}
+
+/* botón/ícono en esquina superior derecha */
+.icono-principal {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icono-principal:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}

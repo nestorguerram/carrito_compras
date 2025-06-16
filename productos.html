@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Productos en venta</title>
+  <link rel="stylesheet" href="css/productos.css">
+</head>
+<body>
+
+  <!-- navegación fija superior -->
+  <header class="encabezado-navegacion">
+    <nav class="nav-principal">
+      <a href="tienda.html">tienda</a>
+      <a href="carrito.html">carro de compras</a>
+      <a href="contacto.html">contacto</a>
+    </nav>
+  </header>
+
+  <!-- encabezado visual con título e ícono del carrito -->
+  <div class="encabezado-visual">
+    <h1>Productos en Venta</h1>
+    <a href="carrito.html">
+      <img src="imagenes/icono-carrito1.png" alt="icono de carrito" class="icono-carrito">
+    </a>
+  </div>
+
+  <!-- productos escritos directamente en HTML -->
+  <main class="contenedor-productos productos">
+    <div class="producto">
+      <img src="imagenes/audifono.jpg" alt="audífono mr">
+      <div class="info-producto">
+        <h3>audífono mr</h3>
+        <p>$700</p>
+        <button onclick="agregarAlCarrito(0, this)">comprar</button>
+        
+      </div>
+
+      
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/bobina.png" alt="bobina de cuerpo">
+      <div class="info-producto">
+        <h3>Bobina de Cuerpo mr</h3>
+        <p>$1800</p>
+        <button onclick="agregarAlCarrito(1, this)">comprar</button>
+      </div>
+      </div>
+
+    
+    <div class="producto">
+      <img src="imagenes/gradiente 2.jpg" alt="gradiente papillon">
+      <div class="info-producto">
+        <h3>Gradiente</h3>
+        <p>$2800</p>
+        <button onclick="agregarAlCarrito(2, this)">comprar</button>
+      </div>
+      </div>
+    
+    
+    <div class="producto">
+      <img src="imagenes/gradiente.jpg" alt="gradiente power stage">
+      <div class="info-producto">
+        <h3>Gradiente Power</h3>
+        <p>$3800</p>
+        <button onclick="agregarAlCarrito(3, this)">comprar</button>
+      </div>
+      </div>
+
+
+
+    <div class="producto">
+      <img src="imagenes/adsorber.jpg" alt="adsorber hc">
+      <div class="info-producto">
+        <h3>Adsorber HC 10</h3>
+        <p>$2200</p>
+        <button onclick="agregarAlCarrito(4, this)">comprar</button>
+      </div>
+      </div>
+
+
+
+    <div class="producto">
+      <img src="imagenes/monitor.jpg" alt="monitor">
+      <div class="info-producto">
+        <h3>Monitor 3 MB</h3>
+        <p>$760</p>
+        <button onclick="agregarAlCarrito(5, this)">comprar</button>
+      </div>
+      </div>
+  </main>
+
+  <script src="js/productos.js"></script>
+
+</body>
+</html>

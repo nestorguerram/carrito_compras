@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito de Compras</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/carrito.css">
+</head>
+<body>
+
+  <!-- encabezado fijo -->
+  <header class="header-carrito">
+    <h1>tu carrito</h1>
+    <nav>
+      <a href="tienda.html">Tienda</a>
+      <a href="productos.html">Productos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- contenedor principal del carrito -->
+  <main class="contenedor-carrito">
+    
+    <!-- sección izquierda con productos -->
+    <section class="productos-seleccionados" id="lista-carrito">
+      <!-- los productos se insertarán dinámicamente aquí -->
+    </section>
+
+    <!-- sección derecha con resumen -->
+    <aside class="resumen-compra">
+      <h2>resumen</h2>
+      <p>subtotal: <span id="subtotal">$0</span></p>
+      <p>descuento (10%): <span id="descuento">$0</span></p>
+      <p class="total">total a pagar: <span id="total">$0</span></p>
+      <button id="finalizar-compra">finalizar compra</button>
+    
+
+    <!-- íconos de tarjetas de crédito aceptadas -->
+     <div class="iconos-tarjetas">
+      <img src="imagenes/visa.png" alt="Visa">
+      <img src="imagenes/master-plop.png" alt="master-plop">
+      <img src="imagenes/mercado-pago.png" alt="mercado-pago">
+     </div>
+     </aside>
+
+
+  </main>
+
+  <script src="js/carrito.js"></script>
+
+  
+
+
+
+</body>
+</html>

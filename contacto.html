@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Datos de contacto</title>
+  <link rel="stylesheet" href="css/contacto.css">
+ 
+
+
+  <body class="contacto">
+  
+    <header class="encabezado-navegacion">
+    <nav class="nav-principal">
+      <a href="tienda.html">tienda</a>
+      <a href="carrito.html">carrito</a>
+      <a href="productos.html">productos</a>
+      
+  </nav>
+
+
+
+
+</header>
+
+  
+
+  <main>
+    <h1>Datos de contacto</h1>
+    <form action="mailto:tu_correo@example.com" method="post" enctype="text/plain">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <!-- <textarea id="mensaje" name="mensaje" rows="4" required></textarea> -->
+       <textarea id="mensaje" name="mensaje" rows="8" required></textarea>
+
+
+      <input type="submit" value="Enviar">
+    </form>
+
+    <div id="datos-contacto" style="margin: 40px; font-family: monospace;"></div>
+
+
+  </main>
+
+  <script>
+  const contacto = document.getElementById("datos-contacto");
+  const p = new URLSearchParams(window.location.search);
+
+  if (p.has("equipo")) {
+    contacto.innerHTML = `
+      <h2>Resumen del Pedido</h2>
+      <p><strong>Equipo:</strong> ${p.get("equipo")}</p>
+      <p><strong>Marca:</strong> ${p.get("marca")}</p>
+      <p><strong>Modelo:</strong> ${p.get("modelo")}</p>
+      <p><strong>Parte:</strong> ${p.get("parte")}</p>
+      <p><strong>Descripción:</strong> ${p.get("descripcion")}</p>
+    `;
+  }
+
+</script>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  // Verifica si los datos existen en la URL
+  if (params.has("equipo")) {
+    const resumen = `
+Pedido Especial:
+
+Equipo: ${params.get("equipo")}
+Marca: ${params.get("marca")}
+Modelo: ${params.get("modelo")}
+Número de parte: ${params.get("parte")}
+Descripción: ${params.get("descripcion")}
+    `.trim();
+
+    document.getElementById("mensaje").value = resumen;
+  }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resumen del Pedido</title>
+  <link rel="stylesheet" href="css/resumen.css">
+</head>
+<body class="contacto">
+  <header>
+    <nav class="nav-principal">
+      <ul>
+        
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="pedidos.html">Pedidos Especiales</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Resumen del Pedido Especial</h1>
+      <div id="resumen-datos" style="margin-left:50px; font-size:18px;"></div>
+
+  <div style="margin-top: 30px; text-align: center;">
+    <button onclick="enviarAContacto()">📤 Enviar</button>
+    <button onclick="window.location.href='pedidos.html'">🔁 Volver a formulario</button>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const resumen = document.getElementById("resumen-datos");
+
+    const datos = {
+      equipo: params.get("equipo"),
+      marca: params.get("marca"),
+      modelo: params.get("modelo"),
+      parte: params.get("parte"),
+      descripcion: params.get("descripcion")
+    };
+
+    resumen.innerHTML = `
+      <p><strong>Equipo:</strong> ${datos.equipo}</p>
+      <p><strong>Marca:</strong> ${datos.marca}</p>
+      <p><strong>Modelo:</strong> ${datos.modelo}</p>
+      <p><strong>Número de parte:</strong> ${datos.parte}</p>
+      <p><strong>Descripción:</strong> ${datos.descripcion}</p>
+    `;
+
+    function enviarAContacto() {
+      const datosURL = new URLSearchParams(datos).toString();
+      window.location.href = `contacto.html?${datosURL}`;
+    }
+  </script>
+</body>
+</html>
+

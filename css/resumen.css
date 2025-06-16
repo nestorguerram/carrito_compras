@@ -1,0 +1,95 @@
+/* resumen.css */
+/* resumen.css */
+
+/* fuente moderna y limpia */
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("../imagenes/fondo.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #222;
+}
+
+/* navegación */
+header {
+  background-color: #1e2a38;
+  padding: 10px 20px;
+}
+
+.nav-principal ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-principal li {
+  margin-right: 20px;
+}
+
+.nav-principal li:first-child {
+  margin-left: 40px;
+}
+
+.nav-principal li:nth-child(2) {
+  margin-left: 15px;
+}
+
+.nav-principal a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-principal a:hover {
+  color: #00c8ff;
+}
+
+/* título principal */
+main h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 28px;
+  color: #1e2a38;
+}
+
+/* bloque de datos */
+#resumen-datos {
+  background: white;
+  padding: 25px 30px;
+  margin: 30px auto;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* botones */
+main button {
+  background-color: rgba(255, 255, 255, 0.1); /* blanco con transparencia */
+  color: blue;
+  border: 2px solid blue;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px); /* difumina el fondo detrás */
+}
+
+main button:hover {
+  background-color: ( 0.1); /* azul con menos transparencia */
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+

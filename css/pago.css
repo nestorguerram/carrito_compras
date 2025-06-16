@@ -1,0 +1,205 @@
+/* config de registro*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", monospace;
+  background-color: black;
+  color: green;
+  position: relative;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  min-height: 100%;
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px auto;
+  position: relative;
+  z-index: 3; /* por encima del marco */
+}
+
+/* MARCO ANIMADO DESDE UNA ESQUINA ░░░ */
+.grid-container::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  margin: 30px auto;
+  border: 2px solid green;
+  box-sizing: border-box;
+  z-index: 1;
+  animation: trazarMarco 3s steps(4) forwards;
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0); /* inicial invisible */
+  pointer-events: none; /* 🔧 Esto permite que el mouse pase por encima */
+}
+
+@keyframes trazarMarco {
+  0%   { clip-path: polygon(0 0, 0 0, 0 0, 0 0); }
+  25%  { clip-path: polygon(0 0, 100% 0, 0 0, 0 0); }
+  50%  { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0); }
+  75%  { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+}
+
+/* Ocultar contenido mientras el marco no ha terminado de cargar */
+.grid-container:not(.marco-completo) > *:not(.header):not(.footer) {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.grid-container.marco-completo > * {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*  GRILLA INTERIOR  */
+.grid-item {
+  border: 1px solid green;
+  padding: 10px;
+  min-height: 100%;
+}
+
+.header {
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.menu a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+  
+}
+
+/*.left, .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}*/
+
+.left { /* alinea el texto mas arriba*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinea hacia arriba */
+  padding-top: 40px;           /* Ajusta este valor según qué tan arriba se necesite */
+}
+
+/* FORMULARIO */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+input, select {
+  font-family: inherit;
+  font-size: 16px;
+  margin-bottom: 12px;
+  padding: 10px;
+  border: 1px solid green;
+  background-color: black;
+  color: white;
+}
+
+select option {
+  background-color: black;
+  color: white;
+}
+
+button {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  padding: 10px;
+  border: 1px solid green;
+}
+
+button:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+/* Simulador de terminal  */
+#terminal-simulada {
+  font-family: "Courier New", monospace;
+  white-space: pre-wrap;
+  overflow: hidden;
+  min-height: auto;
+  margin-top: 50px;
+  border-top: 1px solid green;
+  padding-top: 10px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  background-color: green;
+  animation: blink 1s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { background-color: green; }
+  50% { background-color: transparent; }
+}
+
+/*  FOOTER */
+.footer {
+  border-top: 1px solid green;
+  text-align: center;
+  padding: 6px 0; /* antes en 10*/
+  margin-top: 10px;
+  color: green;
+  background-color: black;
+  font-size: 14px;
+  line-height: 0.3;
+
+  margin-bottom: 0;
+  padding-bottom: 10;
+}
+
+.footer-nav {
+  margin-bottom: 0px;
+}
+
+.footer-nav a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+}
+
+.consola {
+  color: green;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.2rem;
+
+  margin: 0;
+  margin-top: 0px;
+  margin-bottom: -30px;
+  
+}

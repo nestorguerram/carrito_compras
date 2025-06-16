@@ -1,0 +1,113 @@
+/* ░░░ ESTILO GENERAL PARA FORMULARIO DE PEDIDO ESPECIAL ░░░ */
+body {
+  background-color: #000;         /* Fondo oscuro tipo terminal */
+  color: green;                 /* Texto verde fosforescente */
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Contenedor principal del formulario */
+.formulario-pedido {
+  width: 90%;
+  max-width: 500px;
+  background-color: #111;
+  border: 2px solid green ;
+  padding: 30px;
+  box-shadow: 0 0 10px green ;
+}
+
+/* Título del formulario */
+.formulario-pedido h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: green;
+}
+
+/* Estilo de etiquetas y campos */
+.formulario-pedido label {
+  display: block;
+  margin-bottom: 15px;
+  color: green;
+}
+
+/*
+.formulario-pedido input,
+.formulario-pedido textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  border: 1px solid green ;
+  color: green;
+  font-family: monospace;
+  resize: vertical;
+}*/
+
+
+
+/* Estilo para el menú desplegable 
+.formulario-pedido select {
+  width: 100%;
+  padding: 10px;
+  
+  background-color: #000;
+  border: 1px solid green;
+  color: green;
+  font-family: monospace;
+}
+*/
+
+.formulario-pedido input,
+.formulario-pedido textarea,
+.formulario-pedido select {
+  width: 100%;              /* Ocupa todo el ancho del contenedor */
+  padding: 10px;            /* Espaciado interno */
+  background-color: #000;
+  border: 1px solid green;
+  color: green;
+  font-family: monospace;
+  box-sizing: border-box;   /* Incluye el padding en el cálculo del tamaño */
+}
+
+
+
+
+
+
+/* Botón de enviar */
+.formulario-pedido button {
+  width: 100%;
+  padding: 10px;
+  background-color: green;
+  color: #000;
+  border: none;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+
+/*  boton en esquina superior izquierda  */
+#btn-volver {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: black;
+  color: green;
+  border: solid ;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-family: monospace;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#btn-volver:hover {
+  background-color:black;
+}

@@ -1,0 +1,35 @@
+/* navegación fija y uniforme para todas las páginas */
+.encabezado-navegacion {
+  background-color: #222;
+  padding: 10px 20px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.nav-principal {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.nav-principal a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-principal a:hover {
+  color: #00ffcc;
+}
+
+/* para que el contenido no quede oculto por el nav fijo */
+body {
+  padding-top: 60px;
+}

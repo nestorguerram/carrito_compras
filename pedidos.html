@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedido Especial</title>
+  <link rel="stylesheet" href="css/pedidos.css">
+</head>
+<body>
+
+  <!-- Boton de regreso en la esquina superior izquierda  -->
+   <button id="btn-volver" onclick="window.location.href='tienda.html'">
+    < ---
+</button>
+
+
+  <!--  Formulario de pedido -->
+  <section class="formulario-pedido">
+    <h1>Formulario de Cotizacion</h1>
+    <form id="pedidoForm">
+      <label>Equipo:
+        <input type="text" name="equipo" required>
+      </label>
+
+      <label>Marca:
+        <input type="text" name="marca" required>
+      </label>
+
+      <label>Modelo:
+        <input type="text" name="modelo" required>
+      </label>
+
+      <!-- Menú desplegable con tipos de solicitud  -->
+       <label>Descripción de Solicitud:
+        <select name="parte" required>
+          <option value="">Seleccione una opción</option>
+          <option value="Conexión remota">Conexión remota</option>
+          <option value="Servicio de mantenimiento">Servicio de mantenimiento</option>
+          <option value="Solicitud especial">Solicitud especial</option>
+        </select>
+      </label>
+
+
+      <label>Descripción:
+        <textarea name="descripcion" required></textarea>
+      </label>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <script src="js/pedidos.js"></script>
+</body>
+</html>

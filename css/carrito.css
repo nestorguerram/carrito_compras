@@ -1,0 +1,223 @@
+/* estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* cuerpo con fondo claro */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding-top: 100px;
+}
+
+/* encabezado fijo con fondo oscuro */
+.header-carrito {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.header-carrito h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-left: 50px;
+}
+
+.header-carrito nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header-carrito nav a:hover {
+  color: #00ffcc;
+}
+
+/* layout principal */
+.contenedor-carrito {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* productos a la izquierda */
+.productos-seleccionados {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* tarjeta individual */
+.tarjeta-producto {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* imagen del producto */
+.tarjeta-producto img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* info del producto */
+.detalle-producto {
+  flex: 1;
+}
+
+.detalle-producto h3 {
+  margin-bottom: 4px;
+  text-transform: capitalize;
+}
+
+.controles-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.controles-cantidad button {
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* icono eliminar */
+.eliminar {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* resumen a la derecha */
+.resumen-compra {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  min-width: 250px;
+}
+
+.resumen-compra h2 {
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.resumen-compra p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.resumen-compra .total {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #007b5e;
+}
+
+#finalizar-compra {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #007b5e;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#finalizar-compra:hover {
+  background-color: #005f4b;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .contenedor-carrito {
+    flex-direction: column;
+  }
+
+  .resumen-compra {
+    width: 100%;
+  }
+}
+
+
+
+/* sección de íconos de tarjetas de crédito */
+.iconos-tarjetas {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.iconos-tarjetas img {
+  height: 50px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.iconos-tarjetas img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+
+
+.tarjeta-producto img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.detalle-producto {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.mini-imagen {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.info-producto {
+  display: flex;
+  flex-direction: column;
+}

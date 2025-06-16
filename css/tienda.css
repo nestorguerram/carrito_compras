@@ -1,0 +1,178 @@
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+  color: #222;
+  margin: 0;
+}
+
+header {
+  background: #111;
+  color: white;
+  padding: 10px 20px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.producto {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 8px 15px;
+  margin-top: 10px;
+  background: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.oculto {
+  display: none;
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+
+/* despiega opciones bajo servicio */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+}
+
+/* Mostrar al hacer clic */
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+
+
+/* tamaño de imagenes*/
+/* Galería centrada de imágenes */
+.galeria-imagenes {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.galeria-imagenes img {
+  width: 250px;   /* Ajusta según el tamaño deseado */
+  height: 250px;
+  object-fit: cover;
+  border: 2px solid rgb(0, 122, 128);
+}
+
+
+/*  CONTENEDOR DE IMÁGENES CON TEXTO AL PASAR EL MOUSE  */
+.imagen-con-texto {
+  position: relative;              /* Necesario para posicionar el texto */
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border: 2px solid green;
+}
+
+/* Aplica el tamaño uniforme y recorte a la imagen */
+.imagen-con-texto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ░░░ TEXTO QUE APARECE AL PASAR EL MOUSE ░░░ */
+.imagen-con-texto::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.493);  /* Fondo semitransparente */
+  color:white;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;                      /* Oculto por defecto */
+  transition: opacity 0.3s ease;
+}
+
+/* ░░░ ACTIVACIÓN AL HACER HOVER ░░░ */
+.imagen-con-texto:hover::after {
+  opacity: 1;                      /* Aparece el texto */
+}
+
+/* ░░░ TEXTOS ESPECÍFICOS POR IMAGEN ░░░ */
+.img1::after {
+  content: "Servicio remoto";
+}
+
+.img2::after {
+  content: "Mantenimiento";
+}
+
+.img3::after {
+  content: "Productos";
+}
+
+
+header h1 {
+  padding-left: 30px; /* Ajusta este valor h1 a la derecha */
+}
+
+header nav {
+  padding-left: 20px;
+}
+
+
+.seguridad {
+  text-align: center;
+  margin-top: 10px; /* opcional: espacio superior */
+  color: #444;      /* opcional: color sobrio */
+}

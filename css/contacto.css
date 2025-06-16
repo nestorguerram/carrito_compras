@@ -1,0 +1,127 @@
+/* Navegación común para todos los archivos */
+.nav-principal {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.nav-principal ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-principal ul li a {
+  font-family: "Arial", Georgia, serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-principal ul li a:hover {
+  color: rgb(68, 210, 212);
+}
+
+
+/* CONTACTO.HTML */
+body.contacto {
+  background-image: url("../imagenes/fondo2.png");
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: white;
+  color: rgb(225, 214, 214);
+  
+}
+
+main h1 {
+  margin-left: 50px; /* Ajusta el valor a tu gusto */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-start; /* Alinea todo a la izquierda */
+  gap: 20px;
+  max-width: 400px;
+  margin-top: 20px;
+  margin-left:50px
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;               /* Para que se adapte al contenedor */
+  max-width: 300px;          /* Limita el ancho */
+  height: auto;              /* Evita una altura fija para inputs */
+  padding: 10px;
+  margin-left: 0;            /* Alineado al contenedor padre */
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 120px;             /* Altura específica para el área de texto */
+  resize: vertical;          /* Permite al usuario ajustar la altura si desea */
+}
+
+
+input[type="submit"] {
+  padding: 5px 10px;
+  font-size: 20px;
+  background-color: #949ba2;
+  color: white;
+  border: black solid;
+  cursor: pointer;
+  border-radius: 30px;
+  margin-left: 100px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+/* navegación fija y uniforme */
+.encabezado-navegacion {
+  background-color: #222;
+  padding: 10px 20px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.nav-principal {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.nav-principal a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-principal a:hover {
+  color: #00ffcc;
+}
+
+body {
+  padding-top: 60px;
+}

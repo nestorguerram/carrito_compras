@@ -32,7 +32,7 @@ function mostrarCarrito() {
   actualizarResumen();
 }
 
-// cambiar cantidad de un producto
+// cambiar cantidad de un producto, primero suma
 function cambiarCantidad(index, cambio) {
   const producto = carrito[index];
   if (!producto) return;
@@ -47,7 +47,7 @@ function cambiarCantidad(index, cambio) {
   mostrarCarrito();
 }
 
-// eliminar producto
+// eliminar un producto
 function eliminarProducto(index) {
   carrito.splice(index, 1);
   localStorage.setItem("carrito", JSON.stringify(carrito));

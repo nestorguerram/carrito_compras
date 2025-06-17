@@ -147,9 +147,10 @@ button:hover {
   white-space: pre-wrap;
   overflow: hidden;
   min-height: auto;
-  margin-top: 50px;
+  margin-top: 20px;
   border-top: 1px solid green;
   padding-top: 10px;
+
 }
 
 .cursor {
@@ -204,7 +205,7 @@ button:hover {
   
 }
 
-
+/*posicion del logo */
 .logo-terminal {
   margin-top: -60px;
   width: 90px;

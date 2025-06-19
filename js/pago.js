@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const terminal = document.getElementById("terminal-simulada");
+  //const terminal = document.getElementById("terminal-simulada"); esto funcionaba
+  const terminal = document.getElementById("texto-terminal");
+
   const formulario = document.getElementById("formularioPago");
   const container = document.querySelector(".grid-container");
 

@@ -11,10 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // texto animado estilo consola
   const lineas = [
+    "Servico CTC chile servicio telefonico",
     "Inicializando sistema de pagos",
     "Verificando conexión segura",
-    "Cargando formulario",
-    "Listo para recibir datos del usuario"
+    "Cargando formulario"
+    
   ];
 
   const cursor = document.createElement("span");

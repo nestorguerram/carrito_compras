@@ -100,7 +100,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* Alinea hacia arriba */
-  padding-top: 40px;           /* Ajusta este valor según qué tan arriba se necesite */
+  padding-top: 10px;           /* Ajusta este valor según qué tan arriba se necesite */
 }
 
 /* FORMULARIO */

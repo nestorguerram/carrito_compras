@@ -72,6 +72,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const tipoPago = this.tipoPago.value;
     const numerotarjeta = this.numerotarjeta.value.trim();
 
+
+    // validación estricta del nombre (exactamente 2 letras, sin acentos ni símbolos)// 
+    const nombreRegex = /^[A-Za-z]{2}$/;
+    if (!nombreRegex.test(nombre)) {
+      alert("El nombre debe tener exactamente 2 letras, sin números ni caracteres especiales.");
+      return;
+    }
+
+
     // validación de RUT chileno básico
     if (!/^\d{1,2}\.\d{3}\.\d{3}-[\dkK]$/.test(rut)) {
       alert("Formato de RUT inválido. Usa el formato 12.345.678-9");

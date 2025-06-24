@@ -73,12 +73,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const numerotarjeta = this.numerotarjeta.value.trim();
 
 
-    // validación estricta del nombre (exactamente 2 letras, sin acentos ni símbolos)// 
+    /*validación estricta del nombre (exactamente 2 letras, sin acentos ni símbolos)
     const nombreRegex = /^[A-Za-z]{2}$/;
     if (!nombreRegex.test(nombre)) {
       alert("El nombre debe tener exactamente 2 letras, sin números ni caracteres especiales.");
       return;
+    } */
+
+
+    // validación de nombre y apellido (exactamente 2 letras sin acentos, números ni caracteres especiales)
+    const soloDosLetrasRegex = /^[A-Za-z]{2}$/;
+    if (!soloDosLetrasRegex.test(nombre)) {
+      alert("El nombre debe contener exactamente 2 letras, sin números ni caracteres especiales.");
+      return;
     }
+
+
+    if (!soloDosLetrasRegex.test(apellido)) {
+      alert("El apellido debe contener exactamente 2 letras, sin números ni caracteres especiales.");
+      return;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     // validación de RUT chileno básico

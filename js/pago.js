@@ -96,27 +96,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // validación de RUT chileno básico
+    // validación de RUT 
     if (!/^\d{1,2}\.\d{3}\.\d{3}-[\dkK]$/.test(rut)) {
       alert("Formato de RUT inválido. Usa el formato 12.345.678-9");
       return;
     }
 
-    // validación de email básica
+    // validación de email
     if (!/^\S+@\S+\.\S+$/.test(correo)) {
       alert("Correo electrónico inválido.");
       return;

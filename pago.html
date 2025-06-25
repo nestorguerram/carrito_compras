@@ -46,6 +46,8 @@
 
     <!-- Columna derecha con formulario -->
     <section class="grid-item right">
+      <!-- mensaje de errror -->
+       <div id="mensajeError" class="mensaje-error"></div>
       <form id="formularioPago">
         <!-- datos personales -->
          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
@@ -68,11 +70,11 @@
   id="numerotarjeta"
   name="numerotarjeta"
   placeholder="Número de tarjeta (16 dígitos)"
-  pattern="\d{16}"
+  
   maxlength="16"
   inputmode="numeric"
   required>
-
+<!-- pattern="\d{16}" -->
 
   <button type="submit">P A Y</button>
 </form>

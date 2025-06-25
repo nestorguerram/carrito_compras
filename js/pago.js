@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // validación de nombre y apellido (exactamente 2 letras sin acentos, números ni caracteres especiales)
-    const soloDosLetrasRegex = /^[A-Za-z]{2}$/;
+    const soloDosLetrasRegex = /^[A-Za-z]{2,10}$/;
     if (!soloDosLetrasRegex.test(nombre)) {
       alert("El nombre debe tener minimo 2 letras, sin números ni caracteres especiales.");
       return;

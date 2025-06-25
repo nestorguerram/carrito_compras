@@ -133,8 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mostrarError("El teléfono debe contener solo números.");
       return;
     }
-
-
+    
     // validación del número de tarjeta
     if (!/^\d{16}$/.test(numerotarjeta)) {
       mostrarError("El número de tarjeta debe tener exactamente 16 dígitos numéricos.");
@@ -164,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // limpia carrito y confirma pago
     localStorage.removeItem("carrito");
-    alert("✅ Pago realizado con éxito. ¡Gracias por tu compra!");
+    alert("✅ Pago realizado con éxito ✅. ¡Gracias por tu compra!");
 
     // redirige a la tienda o página final
     

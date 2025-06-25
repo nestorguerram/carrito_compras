@@ -10,7 +10,7 @@ body {
 .boton-flotante {
   position: fixed;      /* Se queda fijo al hacer scroll */
   top: 10px;            /* Margen superior */
-  left: 10px;           /* Margen izquierdo */
+  left: 5px;           /* Margen izquierdo */
   z-index: 1000;        /* Encima de todo el contenido */
 }
 
@@ -72,7 +72,7 @@ body {
 }
 
 .morado {
-  color: #a259ff;
+  color: #00d1b2;
 }
 
 .footer {

@@ -12,6 +12,11 @@ body {
   position: relative;
 }
 
+
+
+
+
+
 /* CONTENEDOR PRINCIPAL */
 .grid-container {
   display: grid;
@@ -25,7 +30,7 @@ body {
   z-index: 3; /* por encima del marco */
 }
 
-/* MARCO ANIMADO DESDE UNA ESQUINA ░░░ */
+/* MARCO ANIMADO DESDE UNA ESQUINA  */
 .grid-container::before {
   content: "";
   position: absolute;
@@ -40,7 +45,7 @@ body {
   z-index: 1;
   animation: trazarMarco 3s steps(4) forwards;
   clip-path: polygon(0 0, 0 0, 0 0, 0 0); /* inicial invisible */
-  pointer-events: none; /* 🔧 Esto permite que el mouse pase por encima */
+  pointer-events: none; /* Esto permite que el mouse pase por encima */
 }
 
 @keyframes trazarMarco {
@@ -118,26 +123,59 @@ input, select {
   padding: 10px;
   border: 1px solid green;
   background-color: black;
-  color: white;
+  color: green;
 }
 
 select option {
   background-color: black;
-  color: white;
+  color: green;
 }
 
+
+
+
+
+/* === Estilo uniforme para todos los botones === */
 button {
   background-color: black;
-  color: white;
+  color: green; /* texto verde */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  padding: 10px 20px;
+  border: 1px solid green;
+  border-radius: 4px;
+}
+
+/*
+button {
+  background-color: black;
+  color: green;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease;
   padding: 10px;
   border: 1px solid green;
 }
+*/
+
+
+/*button {
+  background-color: black;
+  color: green;         /* texto verde para todos los botones */
+ /* font-weight: bold;
+  cursor: pointer;
+  border: 1px solid green;
+  padding: 10px 20px;
+  border-radius: 4px;
+  
+}*/
+
+
+
 
 button:hover {
-  background-color: whitesmoke;
+  background-color: green;
   color: black;
 }
 
@@ -158,10 +196,7 @@ button:hover {
   padding-left: 0px; /* opcional, para un pequeño espacio interior */
 
 
-
-
-
-  
+ 
 }
 
 .cursor {
@@ -229,3 +264,25 @@ button:hover {
   opacity: 5;
   
 }
+
+
+/* Estilo para el texto del placeholder en todos los campos */
+input::placeholder,
+textarea::placeholder {
+  color: green;
+  opacity: 1; /* asegura que se vea con intensidad */
+}
+
+
+/* Estilo uniforme para inputs y selects */
+input,
+select,
+textarea {
+  background-color: black; /* fondo oscuro */
+  color: green;            /* texto verde */
+  border: 1px solid green;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+

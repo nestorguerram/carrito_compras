@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // texto animado estilo consola
   const lineas = [
-    "Servico CTC chile servicio telefonico",
-    "Inicializando sistema de pagos",
-    "Verificando conexión segura",
-    "Cargando formulario"
+    "Carga de Sistema Operativo D.O.S",
+    "Inicializando MODEM ",
+    "CHECK POINT TO POINT",
+    "CARGA FINALIZADA"
     
   ];
 
@@ -84,13 +84,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // validación de nombre y apellido (exactamente 2 letras sin acentos, números ni caracteres especiales)
     const soloDosLetrasRegex = /^[A-Za-z]{2}$/;
     if (!soloDosLetrasRegex.test(nombre)) {
-      alert("El nombre debe contener exactamente 2 letras, sin números ni caracteres especiales.");
+      alert("El nombre debe tener minimo 2 letras, sin números ni caracteres especiales.");
       return;
     }
 
 
     if (!soloDosLetrasRegex.test(apellido)) {
-      alert("El apellido debe contener exactamente 2 letras, sin números ni caracteres especiales.");
+      alert("El apellido debe tener minimo 2 letras, sin números ni caracteres especiales.");
       return;
     }
 
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // validación de email
     if (!/^\S+@\S+\.\S+$/.test(correo)) {
-      alert("Correo electrónico inválido.");
+      alert("Correo electrónico inválido. - Formato xxx@xxx.xxx");
       return;
     }
 

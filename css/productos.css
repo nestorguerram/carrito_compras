@@ -130,7 +130,7 @@ body {
 
 /* sección bicolor de texto dentro del producto */
 .info-producto {
-  background: linear-gradient(to right, #a0bfc2, rgb(95, 104, 104)); /* turquesa a rosa claro */
+  background: linear-gradient(to right, #a0bfc2, rgb(95, 104, 104)); /* gris a gris ocuro */
   padding: 12px;
   border-radius: 0 0 20px 20px;
 }

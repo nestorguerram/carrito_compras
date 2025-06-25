@@ -57,7 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //para validar al usuario//
-const iconoCarrito = document.getElementById("icono-carrito");
+//const iconoCarrito = document.getElementById("icono-carrito");
+const iconoCarrito = document.querySelector(".icono-carrito");
+
 if (iconoCarrito) {
   iconoCarrito.addEventListener("click", (e) => {
     e.preventDefault();

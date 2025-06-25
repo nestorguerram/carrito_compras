@@ -111,3 +111,12 @@ button:hover {
 #btn-volver:hover {
   background-color:black;
 }
+
+
+/* Color verde para texto de sugerencia dentro de los inputs */
+.formulario-pedido input::placeholder,
+.formulario-pedido textarea::placeholder,
+.formulario-pedido select::placeholder {
+  color: green;
+  opacity: 1;
+}

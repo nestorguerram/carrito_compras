@@ -58,7 +58,19 @@ document.addEventListener("DOMContentLoaded", () => {
     iniciarAnimacion();
   }, 3000);
 
-  // validación del formulario al enviar
+  // Función para mostrar errores en pantalla
+  function mostrarError(mensaje) {
+    const mensajeDiv = document.getElementById("mensajeError");
+    if (mensajeDiv) {
+      mensajeDiv.textContent = mensaje;
+      mensajeDiv.style.display = "block";
+      setTimeout(() => {
+        mensajeDiv.style.display = "none";
+      }, 5000);
+    }
+  }
+
+// validación del formulario al enviar
   formulario.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -80,17 +92,24 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     } */
 
+ 
 
-    // validación de nombre y apellido (exactamente 2 letras sin acentos, números ni caracteres especiales)
+
+    // validación de nombre (exactamente 2 letras sin acentos, números ni caracteres especiales)
     const soloDosLetrasRegex = /^[A-Za-z]{2,10}$/;
     if (!soloDosLetrasRegex.test(nombre)) {
-      alert("El nombre debe tener minimo 2 letras, sin números ni caracteres especiales.");
+      mostrarError("El nombre debe tener mínimo 2 letras, sin números ni caracteres especiales.");
       return;
     }
+    
+    //if (!soloDosLetrasRegex.test(nombre)) {
+    //  alert("El nombre debe tener minimo 2 letras, sin números ni caracteres especiales.");
+    //  return;
+    //}
 
-
+    
     if (!soloDosLetrasRegex.test(apellido)) {
-      alert("El apellido debe tener minimo 2 letras, sin números ni caracteres especiales.");
+      mostrarError("El apellido debe tener minimo 2 letras, sin números ni caracteres especiales.");
       return;
     }
 
@@ -98,25 +117,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // validación de RUT 
     if (!/^\d{1,2}\.\d{3}\.\d{3}-[\dkK]$/.test(rut)) {
-      alert("Formato de RUT inválido. Usa el formato 12.345.678-9");
+      mostrarError("Formato de RUT inválido. Usa el formato 12.345.678-9");
       return;
     }
 
     // validación de email
     if (!/^\S+@\S+\.\S+$/.test(correo)) {
-      alert("Correo electrónico inválido. - Formato xxx@xxx.xxx");
+      mostrarError("Correo electrónico inválido. - Formato xxx@xxx.xxx");
       return;
     }
 
+
+    // validación de teléfono (solo números)
+    if (!/^\d+$/.test(telefono)) {
+      mostrarError("El teléfono debe contener solo números.");
+      return;
+    }
+
+
     // validación del número de tarjeta
     if (!/^\d{16}$/.test(numerotarjeta)) {
-      alert("El número de tarjeta debe tener exactamente 16 dígitos numéricos.");
+      mostrarError("El número de tarjeta debe tener exactamente 16 dígitos numéricos.");
       return;
     }
 
     // validación de método de pago
     if (!tipoPago) {
-      alert("Por favor selecciona un método de pago.");
+      mostrarError("Por favor selecciona un método de pago.");
       return;
     }
 
